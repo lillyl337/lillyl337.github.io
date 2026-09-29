@@ -1,42 +1,35 @@
-# RPG Society static website
+# Oxford Board Games Society website
 
-A plain HTML/CSS/JavaScript website designed for GitHub Pages.
+A simple static website template for GitHub Pages, built with HTML, CSS, JavaScript and Bootstrap 5.3.
 
-## Files
+## Pages
 
-- `index.html` — welcome page
-- `termcard.html` — weekly termcard
-- `documents.html` — important documents
-- `committee.html` — committee page
-- `library.html` — searchable board-game library
-- `join.html` — mailing-list signup page
-- `assets/styles.css` — site styling
-- `assets/site.js` — shared navigation, termcard data, game library data, interactions
+- `index.html` - Welcome Page
+- `committee.html` - Committee Page
+- `termcard.html` - Termcard
+- `mailing-list.html` - Mailing List
+- `library.html` - Board Game Library
+- `documents.html` - Society Documents
 
-## Publish on GitHub Pages
+## Editing content
 
-1. Create a repository and copy these files into its root.
-2. Commit and push to GitHub.
-3. In **Settings → Pages**, choose **Deploy from a branch**.
-4. Select your main branch and `/ (root)`.
-5. Save. GitHub will publish the site.
+Most society-specific content is in `assets/site.js`:
 
-## Most common edits
+- `committee` contains committee members
+- `termcard` contains weekly events
+- `documents` contains document links
+- `games` contains the board-game library
 
-### Change the society name
-Search for `RPG Society` in the HTML and `assets/site.js`.
+Add PDFs or other files to the `documents/` directory and update their paths in `assets/site.js`.
 
-### Update the termcard
-Edit the `events` array near the top of `assets/site.js`.
+## Bootstrap
 
-### Update the game library
-Edit the `games` array in `assets/site.js`.
+The site loads Bootstrap 5.3.3 from jsDelivr. No build step or package manager is required.
 
-### Add real documents
-Put PDFs in a `documents/` directory and change the `href="#"` links in `documents.html`, or point them to external files.
+## GitHub Pages
 
-### Connect the mailing list
-In `join.html`, replace `action="#"` with your mailing provider's form endpoint and change `data-configured="false"` to `data-configured="true"`.
+Upload the contents of this folder to a GitHub repository. In GitHub, open Settings -> Pages and choose the branch/folder you want to publish (normally the repository's main branch and `/root`).
 
-## Custom domain
-If you later use a custom domain, add a `CNAME` file containing the domain name and configure the relevant DNS records with your registrar.
+## Mailing list
+
+`mailing-list.html` contains a non-functional template form. GitHub Pages cannot process form submissions on its own. Replace the form `action` with your university mailing-list signup URL or another external form service.

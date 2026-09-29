@@ -1,0 +1,68 @@
+:root {
+  --obs-blue: #17324d;
+  --obs-gold: #d3a84c;
+  --obs-cream: #f7f4ed;
+}
+
+body {
+  color: #25313c;
+  background: #fff;
+}
+
+.hero {
+  color: #fff;
+  background: linear-gradient(135deg, var(--obs-blue), #274e70);
+}
+
+.page-heading {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #7a5c19;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.py-lg-6 {
+  padding-top: 7rem !important;
+  padding-bottom: 7rem !important;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.hero .card {
+  color: #25313c;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--obs-gold);
+  --bs-btn-border-color: var(--obs-gold);
+  --bs-btn-hover-bg: #b58d35;
+  --bs-btn-hover-border-color: #b58d35;
+  --bs-btn-color: #1d1d1d;
+  --bs-btn-hover-color: #1d1d1d;
+}
+
+.game-card .badge {
+  font-weight: 500;
+}
+
+.termcard-table td,
+.termcard-table th {
+  padding: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero .d-flex {
+    justify-content: center;
+  }
+}

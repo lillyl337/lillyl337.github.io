@@ -1,23 +1,105 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A university roleplaying and board game society.">
-  <title>RPG Society</title><link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Oxford Board Games Society - welcome page">
+  <title>Oxford Board Games Society | Welcome</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<div data-site-header></div>
-<main id="main">
-  <section class="hero"><div class="container hero-grid">
-    <div><span class="eyebrow">Tabletop roleplaying & board games</span><h1>Find a table. Tell a story.</h1><p class="lead">Welcome to our RPG society: a place for campaigns, one-shots, board games, workshops, and meeting people who enjoy games around a table. Beginners are very welcome.</p><div class="actions"><a class="btn btn-primary" href="termcard.html">See this term</a><a class="btn btn-secondary" href="join.html">Join the mailing list</a></div></div>
-    <aside class="hero-card"><div class="dice">⚄</div><h2>New here?</h2><p>You do not need to own dice, know a ruleset, or arrive with a group. Come to a social or one-shot and we will help you find a game.</p></aside>
-  </div></section>
-  <section class="section section-alt"><div class="container"><div class="section-head"><div><span class="eyebrow">Start here</span><h2>Everything you need</h2></div><p>The site is intentionally simple: current events, useful society information, and resources for members.</p></div><div class="grid-3">
-    <article class="card"><div class="meta">This term</div><h3>Weekly termcard</h3><p>See socials, one-shots, workshops, and board-game nights at a glance.</p><a href="termcard.html">View termcard →</a></article>
-    <article class="card"><div class="meta">Resources</div><h3>Important documents</h3><p>Constitution, codes of conduct, safety guidance, and other useful links.</p><a href="documents.html">Open documents →</a></article>
-    <article class="card"><div class="meta">Borrow</div><h3>Board-game library</h3><p>Search the society collection by name, player count, length, or style.</p><a href="library.html">Browse games →</a></article>
-  </div></div></section>
-  <section class="section"><div class="container grid-2"><div><span class="eyebrow">How it works</span><h2>Roleplaying games without the barrier to entry</h2><p class="lead">Most society events are informal. Some nights are for meeting groups; some have scheduled games; others are simply a chance to play board games and chat.</p></div><div class="card"><h3>Want announcements?</h3><p>Join the mailing list for event details, venue changes, campaign matching, and society news.</p><a class="btn btn-primary" href="join.html">Join mailing list</a></div></div></section>
-</main>
-<div data-site-footer></div><script src="assets/site.js"></script>
-</body></html>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Oxford Board Games Society</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Welcome</a></li>
+          <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
+          <li class="nav-item"><a class="nav-link" href="termcard.html">Termcard</a></li>
+          <li class="nav-item"><a class="nav-link" href="mailing-list.html">Mailing List</a></li>
+          <li class="nav-item"><a class="nav-link" href="library.html">Board Game Library</a></li>
+          <li class="nav-item"><a class="nav-link" href="documents.html">Society Documents</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero py-5 py-lg-6">
+    <div class="container py-4 py-lg-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-8">
+          <span class="badge text-bg-light mb-3">University society • Oxford</span>
+          <h1 class="display-4 fw-bold mb-3">Welcome to the Oxford Board Games Society</h1>
+          <p class="lead mb-4">A home for board games, card games, strategy games and good company. This template is ready for your society's own events, library and information.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="termcard.html">See the termcard</a>
+            <a class="btn btn-outline-light btn-lg" href="mailing-list.html">Join the mailing list</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card shadow-lg border-0">
+            <div class="card-body p-4">
+              <h2 class="h4">Getting started</h2>
+              <p class="text-secondary">Add your regular meeting details, venue information and a short description of the society here.</p>
+              <hr>
+              <p class="mb-2"><strong>When:</strong> Add your meeting day/time</p>
+              <p class="mb-2"><strong>Where:</strong> Add your venue</p>
+              <p class="mb-0"><strong>Who:</strong> Everyone welcome</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="h4">Events</h2>
+                <p class="text-secondary">Keep members up to date with weekly sessions, socials, tournaments and other events.</p>
+                <a href="termcard.html" class="stretched-link">View the termcard</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="h4">Games</h2>
+                <p class="text-secondary">Publish the society's game collection and make it easy to browse and search.</p>
+                <a href="library.html" class="stretched-link">Browse the library</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="h4">Information</h2>
+                <p class="text-secondary">Make committee information, society documents and contact details easy to find.</p>
+                <a href="documents.html" class="stretched-link">View society documents</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-top py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 small text-secondary">
+      <span>&copy; <span data-current-year></span> Oxford Board Games Society</span>
+      <span>GitHub Pages template</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
