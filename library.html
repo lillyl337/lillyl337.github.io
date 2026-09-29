@@ -1,19 +1,91 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Oxford Board Games Society board game library">
   <title>Oxford Board Games Society | Board Game Library</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"><div class="container"><a class="navbar-brand fw-bold" href="index.html">Oxford Board Games Society</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li><li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li><li class="nav-item"><a class="nav-link" href="termcard.html">Termcard</a></li><li class="nav-item"><a class="nav-link" href="mailing-list.html">Mailing List</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="library.html">Board Game Library</a></li><li class="nav-item"><a class="nav-link" href="documents.html">Society Documents</a></li></ul></div></div></nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        Oxford Board Games Society
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Welcome</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="committee.html">Committee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="termcard.html">Termcard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailing-list.html">Mailing List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="library.html">
+              Board Game Library
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="documents.html">Society Documents</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <main class="container py-5">
-    <div class="page-heading mb-4"><p class="eyebrow mb-2">The collection</p><h1 class="display-5 fw-bold">Board Game Library</h1><p class="lead text-secondary">Add the society's games to <code>assets/site.js</code>. The search and player-count filters update automatically.</p></div>
-    <div class="row g-3 mb-4"><div class="col-md-8"><label for="game-search" class="form-label">Search games</label><input id="game-search" class="form-control" type="search" placeholder="Search by name, category or description"></div><div class="col-md-4"><label for="player-filter" class="form-label">Players</label><select id="player-filter" class="form-select"><option value="">Any number of players</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></div></div>
-    <div id="library-list" class="row g-4"></div>
+    <div class="page-heading mb-4">
+      <p class="eyebrow mb-2">The collection</p>
+      <h1 class="display-5 fw-bold">Board Game Library</h1>
+      <p class="lead text-secondary">
+        Our board game library is currently a work in progress.
+      </p>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-4 p-lg-5 text-center">
+        <div class="display-4 mb-3" aria-hidden="true">🎲</div>
+
+        <span class="badge text-bg-warning mb-3">
+          Work in progress
+        </span>
+
+        <h2 class="h4">Our library is coming soon</h2>
+
+        <p class="text-secondary mb-0">
+          We're currently putting together a catalogue of the Oxford Board
+          Games Society's games. There are no games listed here just yet,
+          but check back soon to see what's available!
+        </p>
+      </div>
+    </div>
   </main>
-  <footer class="border-top py-4"><div class="container small text-secondary">&copy; <span data-current-year></span> Oxford Board Games Society</div></footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="assets/site.js"></script>
+
+  <footer class="border-top py-4">
+    <div class="container small text-secondary">
+      &copy; <span data-current-year></span> Oxford Board Games Society
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/site.js"></script>
 </body>
+
 </html>
