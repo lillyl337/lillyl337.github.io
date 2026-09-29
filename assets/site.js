@@ -176,26 +176,21 @@ const termcard = [
 const documents = [
   {
     title: "Constitution",
-    description: "Add a link to the current society constitution.",
-    url: "documents/constitution.pdf"
+    description: "The constitution governing the Oxford Board Games Society.",
+    url: "documents/Oxford Board Games Society Constitution.pdf"
   },
   {
     title: "Code of Conduct",
-    description: "Add a link to the society code of conduct.",
-    url: "documents/code-of-conduct.pdf"
+    description: "The society's Code of Conduct, setting out the standards of behaviour expected of members and visitors.",
+    url: "documents/Oxford Board Games Society Code of Conduct.pdf"
   },
   {
-    title: "Committee Minutes",
-    description: "Add a link to minutes or meeting records.",
-    url: "documents/"
-  },
-  {
-    title: "Other Documents",
-    description: "Add other important files, policies or reports here.",
-    url: "documents/"
+    title: "Complaints Procedure",
+    description: "The procedure for making and handling complaints within the society.",
+    url: "documents/Oxford Board Games Society Complaints Procedure.pdf"
   }
 ];
-
+ 
 const games = [
   {
     name: "Example Game",
