@@ -4,58 +4,172 @@
 const committee = [
   {
     role: "President",
-    name: "Committee member",
-    description: "Add a short description, contact details or responsibilities."
-  },
-  {
-    role: "Treasurer",
-    name: "Committee member",
-    description: "Add a short description, contact details or responsibilities."
+    name: "Oscar Clement",
+    college: "St Hilda's College",
+    email: "oscar.clement@st-hildas.ox.ac.uk"
   },
   {
     role: "Secretary",
-    name: "Committee member",
-    description: "Add a short description, contact details or responsibilities."
+    name: "Lilly Sefton",
+    college: "Jesus College",
+    email: "lilly.sefton@jesus.ox.ac.uk"
   },
   {
-    role: "Social Secretary",
-    name: "Committee member",
-    description: "Add a short description, contact details or responsibilities."
+    role: "Treasurer",
+    name: "Rory Armstrong-Ortiz",
+    college: "Merton College",
+    email: "rory.armstrong-ortiz@merton.ox.ac.uk"
+  },
+  {
+    role: "Welfare Officer",
+    name: "Lilly Sefton",
+    college: "Jesus College",
+    email: "lilly.sefton@jesus.ox.ac.uk"
+  },
+  {
+    role: "Webmaster",
+    name: "Lilly Sefton",
+    college: "Jesus College",
+    email: "lilly.sefton@jesus.ox.ac.uk"
   }
 ];
 
 const termcard = [
   {
+    week: "Week 0",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
     week: "Week 1",
-    date: "Add date",
-    event: "Add event",
-    time: "Add time",
-    location: "Add location",
-    notes: "Add notes or links"
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 1",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
   },
   {
     week: "Week 2",
-    date: "Add date",
-    event: "Add event",
-    time: "Add time",
-    location: "Add location",
-    notes: "Add notes or links"
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 2",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
   },
   {
     week: "Week 3",
-    date: "Add date",
-    event: "Add event",
-    time: "Add time",
-    location: "Add location",
-    notes: "Add notes or links"
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 3",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
   },
   {
     week: "Week 4",
-    date: "Add date",
-    event: "Add event",
-    time: "Add time",
-    location: "Add location",
-    notes: "Add notes or links"
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 4",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 5",
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 5",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 6",
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 6",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 7",
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 7",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 8",
+    date: "Wednesday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
+  },
+  {
+    week: "Week 8",
+    date: "Saturday",
+    event: "Board Games",
+    time: "7–11 PM",
+    location: "St Hilda's, Vernon Harcourt Room",
+    notes: ""
   }
 ];
 
@@ -109,7 +223,8 @@ function renderCommittee() {
         <div class="card-body p-4">
           <p class="eyebrow mb-2">${escapeHtml(member.role)}</p>
           <h2 class="h4">${escapeHtml(member.name)}</h2>
-          <p class="text-secondary mb-0">${escapeHtml(member.description)}</p>
+          <p class="text-secondary mb-2">${escapeHtml(member.college)}</p>
+          <a href="mailto:${escapeHtml(member.email)}">${escapeHtml(member.email)}</a>
         </div>
       </article>
     </div>
