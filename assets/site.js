@@ -1,5 +1,6 @@
 // Oxford Board Games Society - site data and small interactive behaviours.
-// Edit the arrays below to add your real committee, termcard, documents and games.
+// Edit the arrays below to add your real committee, termcard and documents.
+// Board games are stored separately in data/games.yaml.
 
 const committee = [
   {
@@ -40,7 +41,7 @@ const termcard = [
     date: "Saturday",
     event: "Board Games",
     time: "7–11 PM",
-    location: "St Hilda's, Vernon Harcourt Room",
+    location: "TBC",
     notes: ""
   },
   {
@@ -190,23 +191,8 @@ const documents = [
     url: "documents/Oxford Board Games Society Complaints Procedure.pdf"
   }
 ];
- 
-const games = [
-  {
-    name: "Example Game",
-    players: "2-4",
-    minPlayers: 2,
-    category: "Example",
-    description: "Replace this entry with a real game from the society library."
-  },
-  {
-    name: "Another Example",
-    players: "3-6",
-    minPlayers: 3,
-    category: "Strategy",
-    description: "Add more details about the game here."
-  }
-];
+
+let games = [];
 
 function renderCommittee() {
   const container = document.getElementById("committee-list");
@@ -259,9 +245,51 @@ function renderDocuments() {
   `).join("");
 }
 
-function parseMinPlayers(playerCount) {
-  const match = String(playerCount).match(/\d+/);
-  return match ? Number(match[0]) : 0;
+async function loadGames() {
+  const response = await fetch("data/games.yaml");
+
+  if (!response.ok) {
+    throw new Error(`Could not load games (${response.status})`);
+  }
+
+  const yaml = await response.text();
+  const loadedGames = jsyaml.load(yaml);
+
+  if (!Array.isArray(loadedGames)) {
+    throw new Error("The games YAML must contain a list");
+  }
+
+  games = loadedGames;
+}
+
+function formatPlayers(minPlayers, maxPlayers) {
+  const min = Number(minPlayers);
+  const max = Number(maxPlayers);
+
+  if (min === max) {
+    return `${min} ${min === 1 ? "player" : "players"}`;
+  }
+
+  return `${min}–${max} players`;
+}
+
+function formatPlaytime(minPlaytime, maxPlaytime) {
+  const min = Number(minPlaytime);
+  const max = Number(maxPlaytime);
+
+  if (min === max) {
+    return `${min} min`;
+  }
+
+  return `${min}–${max} min`;
+}
+
+function formatComplexity(complexity) {
+  const value = String(complexity || "");
+
+  if (!value) return "";
+
+  return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
 }
 
 function renderGames() {
@@ -270,37 +298,82 @@ function renderGames() {
 
   const search = document.getElementById("game-search");
   const playerFilter = document.getElementById("player-filter");
+  const complexityFilter = document.getElementById("complexity-filter");
 
   const query = (search?.value || "").trim().toLowerCase();
   const requiredPlayers = Number(playerFilter?.value || 0);
+  const requiredComplexity = complexityFilter?.value || "";
 
   const filtered = games.filter(game => {
-    const haystack = `${game.name} ${game.category} ${game.description}`.toLowerCase();
-    const matchesQuery = !query || haystack.includes(query);
-    const minPlayers = Number(game.minPlayers) || parseMinPlayers(game.players);
-    const matchesPlayers = !requiredPlayers || minPlayers <= requiredPlayers;
-    return matchesQuery && matchesPlayers;
+    const haystack =
+      `${game.name} ${game.complexity} ${game.description}`.toLowerCase();
+
+    const matchesQuery =
+      !query || haystack.includes(query);
+
+    const minPlayers = Number(game.minPlayers);
+    const maxPlayers = Number(game.maxPlayers);
+
+    const matchesPlayers =
+      !requiredPlayers ||
+      (
+        minPlayers <= requiredPlayers &&
+        maxPlayers >= requiredPlayers
+      );
+
+    const matchesComplexity =
+      !requiredComplexity ||
+      game.complexity == requiredComplexity;
+
+    return matchesQuery && matchesPlayers && matchesComplexity;
   });
 
   if (!filtered.length) {
-    container.innerHTML = `<div class="col-12"><div class="alert alert-secondary">No games match your search.</div></div>`;
+    container.innerHTML = `
+      <div class="col-12">
+        <div class="alert alert-secondary">
+          No games match your search.
+        </div>
+      </div>
+    `;
     return;
   }
 
-  container.innerHTML = filtered.map(game => `
-    <div class="col-md-6 col-lg-4">
-      <article class="card game-card h-100 border-0 shadow-sm">
-        <div class="card-body p-4">
-          <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
-            <h2 class="h4 mb-0">${escapeHtml(game.name)}</h2>
-            <span class="badge text-bg-light">${escapeHtml(game.category)}</span>
+  container.innerHTML = filtered.map(game => {
+    const players = formatPlayers(
+      game.minPlayers,
+      game.maxPlayers
+    );
+
+    const playtime = formatPlaytime(
+      game.minPlaytime,
+      game.maxPlaytime
+    );
+
+    const complexity = formatComplexity(game.complexity);
+
+    return `
+      <div class="col-md-6 col-lg-4">
+        <article class="card game-card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h4 mb-2">${escapeHtml(game.name)}</h2>
+
+            <p class="small text-secondary mb-3">
+              <strong>${escapeHtml(players)}</strong>
+              <span aria-hidden="true"> · </span>
+              ${escapeHtml(playtime)}
+              <span aria-hidden="true"> · </span>
+              ${escapeHtml(complexity)} complexity
+            </p>
+
+            <p class="text-secondary mb-0">
+              ${escapeHtml(game.description)}
+            </p>
           </div>
-          <p class="small text-secondary mb-2"><strong>Players:</strong> ${escapeHtml(game.players)}</p>
-          <p class="text-secondary mb-0">${escapeHtml(game.description)}</p>
-        </div>
-      </article>
-    </div>
-  `).join("");
+        </article>
+      </div>
+    `;
+  }).join("");
 }
 
 function escapeHtml(value) {
@@ -326,8 +399,19 @@ document.addEventListener("DOMContentLoaded", () => {
     element.textContent = new Date().getFullYear();
   });
 
-  document.getElementById("game-search")?.addEventListener("input", renderGames);
-  document.getElementById("player-filter")?.addEventListener("change", renderGames);
+  if (document.getElementById("library-list")) {
+    loadGames()
+      .then(renderGames)
+      .catch(error => {
+        document.getElementById("library-list").innerHTML =
+          `<div class="col-12"><div class="alert alert-danger">The game list could not be loaded.</div></div>`;
+        console.error(error);
+      });
+
+    document.getElementById("game-search")?.addEventListener("input", renderGames);
+    document.getElementById("player-filter")?.addEventListener("change", renderGames);
+    document.getElementById("complexity-filter")?.addEventListener("change", renderGames);
+  }
 
   document.querySelector("form[data-placeholder-form]")?.addEventListener("submit", event => {
     event.preventDefault();

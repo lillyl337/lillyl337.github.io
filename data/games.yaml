@@ -1,0 +1,263 @@
+- name: 7 Wonders
+  minPlayers: 2
+  maxPlayers: 7
+  minPlaytime: 30
+  maxPlaytime: 45
+  complexity: medium
+  description: Build an ancient civilisation by drafting cards to develop its science, military, commerce and wonders.
+
+- name: 7 Wonders Duel
+  minPlayers: 2
+  maxPlayers: 2
+  minPlaytime: 30
+  maxPlaytime: 45
+  complexity: medium
+  description: Compete head-to-head to build the greatest civilisation through science, military power and grand wonders.
+
+- name: Abandon All Artichokes
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 20
+  maxPlaytime: 30
+  complexity: easy
+  description: Build a better deck of vegetables as you race to get rid of all your artichokes.
+
+- name: Avalon
+  minPlayers: 5
+  maxPlayers: 10
+  minPlaytime: 45
+  maxPlaytime: 45
+  complexity: medium
+  description: Uncover hidden loyalties through deduction, deception and bluffing in the struggle for Camelot.
+
+- name: Blueprints
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 30
+  maxPlaytime: 30
+  complexity: easy
+  description: Draft colourful dice as building materials to construct the most valuable architectural creations.
+
+- name: Carcassone (Hunters & Gatherers)
+  minPlayers: 2
+  maxPlayers: 5
+  minPlaytime: 35
+  maxPlaytime: 40
+  complexity: easy
+  description: Place tiles and followers to claim forests, rivers and meadows across a prehistoric landscape.
+
+- name: Cheating Moth
+  minPlayers: 3
+  maxPlayers: 5
+  minPlaytime: 30
+  maxPlaytime: 30
+  complexity: easy
+  description: Get rid of your cards by following the rules when you must and secretly cheating when you can.
+
+- name: Clans
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 30
+  maxPlaytime: 30
+  complexity: medium
+  description: Guide mysterious clans across a prehistoric landscape while keeping your own identity hidden.
+
+- name: Coup
+  minPlayers: 2
+  maxPlayers: 6
+  minPlaytime: 15
+  maxPlaytime: 15
+  complexity: easy
+  description: Bluff, challenge and manipulate your rivals until you are the last player with influence.
+
+- name: Dobble
+  minPlayers: 2
+  maxPlayers: 8
+  minPlaytime: 15
+  maxPlaytime: 15
+  complexity: easy
+  description: Race to spot the matching symbol between cards before your opponents do.
+
+- name: Everdell
+  minPlayers: 1
+  maxPlayers: 4
+  minPlaytime: 40
+  maxPlaytime: 80
+  complexity: hard
+  description: Gather resources and welcome woodland creatures as you build a thriving city through the changing seasons.
+
+- name: Flip 7
+  minPlayers: 3
+  maxPlayers: 18
+  minPlaytime: 20
+  maxPlaytime: 20
+  complexity: easy
+  description: Keep drawing cards to build your score without revealing a number you already have.
+
+- name: Heat Pedal to the Metal
+  minPlayers: 1
+  maxPlayers: 6
+  minPlaytime: 30
+  maxPlaytime: 60
+  complexity: medium
+  description: Manage your speed, gears and engine heat as you race around the track and push your car to its limits.
+
+- name: Just One
+  minPlayers: 3
+  maxPlayers: 7
+  minPlaytime: 20
+  maxPlaytime: 60
+  complexity: easy
+  description: Work together to guess secret words from one-word clues without accidentally giving the same clue.
+
+- name: King of Tokyo
+  minPlayers: 2
+  maxPlayers: 6
+  minPlaytime: 30
+  maxPlaytime: 30
+  complexity: easy
+  description: Roll dice, gain powers and battle rival monsters to become the undisputed King of Tokyo.
+
+- name: Love Letter
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 20
+  maxPlaytime: 20
+  complexity: easy
+  description: Deduce your rivals' cards and use character powers to get your love letter closest to the princess.
+
+- name: Machi Koro
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 30
+  maxPlaytime: 30
+  complexity: easy
+  description: Build a lively city whose businesses earn income whenever the right numbers are rolled.
+
+- name: Mascarade
+  minPlayers: 2
+  maxPlayers: 13
+  minPlaytime: 30
+  maxPlaytime: 30
+  complexity: easy
+  description: Bluff about hidden characters and their powers while trying to remember who everyone really is.
+
+- name: Math Fluxx
+  minPlayers: 2
+  maxPlayers: 6
+  minPlaytime: 5
+  maxPlaytime: 30
+  complexity: easy
+  description: Play number cards and changing rules in a fast-moving card game where the goal never stays the same.
+
+- name: Not Alone
+  minPlayers: 2
+  maxPlayers: 7
+  minPlaytime: 30
+  maxPlaytime: 45
+  complexity: medium
+  description: Stranded explorers try to evade a mysterious creature that predicts where they will hide next.
+
+- name: On the Underground
+  minPlayers: 2
+  maxPlayers: 5
+  minPlaytime: 60
+  maxPlaytime: 60
+  complexity: medium
+  description: Build underground railway lines to connect destinations and attract passengers across the city.
+
+- name: Pandemic
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 45
+  maxPlaytime: 45
+  complexity: medium
+  description: Work together as disease-fighting specialists to contain outbreaks and discover cures before time runs out.
+
+- name: Perudo
+  minPlayers: 2
+  maxPlayers: 10
+  minPlaytime: 15
+  maxPlaytime: 30
+  complexity: easy
+  description: Bluff about the dice hidden around the table and decide when your opponents have pushed their luck too far.
+
+- name: Port Royal
+  minPlayers: 2
+  maxPlayers: 5
+  minPlaytime: 20
+  maxPlaytime: 50
+  complexity: easy
+  description: Recruit adventurers and collect coins by revealing cards while deciding how far to push your luck.
+
+- name: Quest
+  minPlayers: 4
+  maxPlayers: 10
+  minPlaytime: 30
+  maxPlaytime: 30
+  complexity: easy
+  description: Use deduction, deception and secret roles to determine who can be trusted on dangerous quests.
+
+- name: Qwirkle
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 45
+  maxPlaytime: 45
+  complexity: easy
+  description: Match tiles by colour and shape to create lines, score points and complete valuable Qwirkles.
+
+- name: Space Base
+  minPlayers: 2
+  maxPlayers: 5
+  minPlaytime: 60
+  maxPlaytime: 60
+  complexity: medium
+  description: Expand your fleet of spacecraft to generate increasingly powerful rewards from every roll of the dice.
+
+- name: Star Realms
+  minPlayers: 2
+  maxPlayers: 2
+  minPlaytime: 20
+  maxPlaytime: 20
+  complexity: medium
+  description: Build a powerful fleet from a shared market and reduce your opponent's authority to zero.
+
+- name: Stella
+  minPlayers: 2
+  maxPlayers: 4
+  minPlaytime: 5
+  maxPlaytime: 30
+  complexity: easy
+  description: Interpret illustrated cards from a shared clue and score by matching your choices with other players.
+
+- name: Sushi Go Party
+  minPlayers: 2
+  maxPlayers: 8
+  minPlaytime: 20
+  maxPlaytime: 20
+  complexity: easy
+  description: Draft adorable sushi cards and combine them into the most valuable meal.
+
+- name: The Crew, Mission Deap Sea
+  minPlayers: 2
+  maxPlayers: 5
+  minPlaytime: 20
+  maxPlaytime: 20
+  complexity: medium
+  description: Work together through limited communication to complete increasingly challenging underwater trick-taking missions.
+
+- name: Twilight Imperium
+  minPlayers: 4
+  maxPlayers: 8
+  minPlaytime: 480
+  maxPlaytime: 720
+  complexity: hard
+  description: Extremely long but very rewarding game of galactic conquest. Played outside normal board game sessions, please email lilly.sefton@jesus.ox.ac.uk if you're interested.  
+
+- name: Wizard
+  minPlayers: 3
+  maxPlayers: 6
+  minPlaytime: 45
+  maxPlaytime: 45
+  complexity: easy
+  description: Predict exactly how many tricks you will win, then use your cards to make your bid come true.
