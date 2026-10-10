@@ -41,8 +41,8 @@ const termcard = [
     date: "Saturday",
     event: "Board Games",
     time: "7–11 PM",
-    location: "TBC",
-    notes: ""
+    location: "None",
+    notes: "There will be **no** session on week 0 Saturday"
   },
   {
     week: "Week 1",
